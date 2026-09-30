@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nashcom Solutions - Letterhead</title>
+    <style>
+        :root {
+            --primary-orange: #FF6600;
+            --dark-orange: #D95300;
+            --text-gray: #333333;
+            --light-gray: #777777;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: var(--text-gray);
+        }
+
+        /* Letterhead Container (Standard A4 Dimensions) */
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 20px auto;
+            background: #ffffff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Header Layout */
+        .header {
+            padding: 40px 50px 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 3px solid var(--primary-orange);
+            position: relative;
+        }
+
+        /* Decorative Top Bar */
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: var(--primary-orange);
+        }
+
+        /* Logo Branding */
+        .brand {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text {
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--primary-orange);
+            letter-spacing: -1px;
+            line-height: 1;
+            margin: 0;
+        }
+
+        .logo-text span {
+            font-weight: 300;
+            color: #111111;
+            font-size: 26px;
+            margin-left: 2px;
+        }
+
+        .tagline {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #555555;
+            margin-top: 6px;
+            font-weight: 600;
+        }
+
+        /* Contact Details Right Header */
+        .contact-info {
+            text-align: right;
+            font-size: 12px;
+            line-height: 1.6;
+            color: var(--text-gray);
+        }
+
+        .contact-info strong {
+            color: var(--primary-orange);
+        }
+
+        /* Services Bar */
+        .services-bar {
+            background-color: #fffaf5;
+            border-bottom: 1px solid #ffe3d1;
+            padding: 8px 50px;
+            font-size: 10.5px;
+            color: #666666;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        .services-bar span {
+            color: var(--primary-orange);
+            font-weight: bold;
+            margin: 0 6px;
+        }
+
+        /* Body Content Area Placeholder */
+        .content {
+            padding: 50px;
+            flex-grow: 1;
+            font-size: 14px;
+            line-height: 1.8;
+            color: #444444;
+        }
+
+        .date {
+            text-align: right;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .recipient {
+            margin-bottom: 30px;
+        }
+
+        .letter-body {
+            color: #333333;
+        }
+
+        /* Footer Layout */
+        .footer {
+            padding: 20px 50px 30px 50px;
+            position: relative;
+        }
+
+        .footer-line {
+            height: 2px;
+            background: linear-gradient(to right, var(--primary-orange), #ffffff);
+            margin-bottom: 15px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            color: var(--light-gray);
+        }
+
+        .footer-location {
+            font-weight: 600;
+            color: var(--text-gray);
+        }
+
+        @media print {
+            body {
+                background: none;
+            }
+            .page {
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+                height: 100vh;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+    <div>
+        <!-- HEADER SECTION -->
+        <div class="header">
+            <div class="brand">
+                <!-- 'nashcom' strictly in lowercase -->
+                <h1 class="logo-text">nashcom<span>SOLUTIONS</span></h1>
+                <div class="tagline">Telecommunication Services & Infrastructure</div>
+            </div>
+            
+            <div class="contact-info">
+                <div><strong>Location:</strong> Nairobi, Kenya</div>
+                <div><strong>Phone:</strong> 0782203216</div>
+                <div><strong>Email:</strong> info@naschom.com</div>
+            </div>
+        </div>
+
+        <!-- SERVICES SUB-HEADER -->
+        <div class="services-bar">
+            BTS Installation <span>•</span> Site Maintenance <span>•</span> Drive Tests <span>•</span> Network Optimisation
+        </div>
+
+        <!-- LETTER CONTENT AREA -->
+        <div class="content">
+            <div class="date">Date: DD / MM / YYYY</div>
+            
+            <div class="recipient">
+                <strong>To:</strong> [Recipient Name / Company]<br>
+                <strong>Address:</strong> [Recipient Address]<br>
+                <strong>Subject:</strong> [Subject of the Letter]
+            </div>
+
+            <div class="letter-body">
+                <p>Dear [Recipient Name],</p>
+                <p>[Type your letter content here...]</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <div class="footer">
+        <div class="footer-line"></div>
+        <div class="footer-content">
+            <div class="footer-location">Nairobi, Kenya</div>
+            <div>Nashcom Solutions — Quality & Reliability in Telecom Services</div>
+            <div>0782203216 | info@naschom.com</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
